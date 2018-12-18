@@ -1,0 +1,20 @@
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    align-items: start;
+
+    @mixin atMedium {
+        {
+            grid-template-columns: 1.25fr 2fr;
+        }
+
+        &__medium-4 {
+            grid-column: 1 / 2;
+        }
+    
+        &__medium-8 {
+            grid-column: 2 / -1;
+        }
+    }   
+}
