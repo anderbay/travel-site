@@ -664,13 +664,38 @@ a {
             align-items: start;   
 }
 
-@media (min-width: 800px) {
-        .row {
-            grid-template-columns: 1.25fr 2fr;
-        }
+.row__half {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 6.25rem;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: start;
+    }
 
+@media (min-width: 800px) {
+
+.row__half {
+            grid-row-gap: 6.25rem
+    }
+    }
+
+@media (min-width: 800px) {
+
+.row {       
+        grid-template-columns: 1.25fr 2fr   
+}
+        
         .row__medium-4 {
             grid-column: 1 / 2;
+        }
+
+        .row__half {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .row__medium-6 {
+            grid-template-columns: 50% 50%;
         }
     
         .row__medium-8 {
@@ -679,8 +704,9 @@ a {
     }
 
 .generic-content-container p {
+        font-weight: 300;
         line-height: 1.65; 
-        margin: 1.8rem 0;
+        margin: 0 0 1.8rem 0;
     }
 
 @media (min-width: 530px) {
@@ -692,6 +718,95 @@ a {
 
 .generic-content-container p a {
         font-weight: 700;
+    }
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+@media (min-width: 530px) {
+
+.section-title {
+       font-size: 3.75rem
+}
+    }
+
+.section-title strong {
+        font-weight: 500;
+    }
+
+.section-title__icon {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: .3em;
+    }
+
+@media (min-width: 530px) {
+
+.section-title__icon {
+            margin: 0 .5rem 0 0;
+            display: inline-block
+    }
+    }
+
+.feature-item {
+    display: grid;
+    grid-template-columns: 1fr; 
+    -webkit-box-align: start; 
+        -ms-flex-align: start; 
+            align-items: start;
+    justify-items: center;
+
+}
+
+@media (min-width: 530px) {
+
+.feature-item {
+        grid-template-columns: auto 1fr;
+        grid-column-gap: 2rem;
+        padding-bottom: 2.5rem;
+        justify-items: start
+
+}
+    }
+
+@media (min-width: 530px) {
+
+.feature-item__icon {
+            width: 4rem;
+            height: 4rem;
+            grid-row: 1 / span 2;
+            -webkit-transform: translateY(0.25rem);
+                    transform: translateY(0.25rem)       
+    }
+    }
+
+.feature-item__heading {
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin-bottom: .8rem;
+        margin-top: 0;
+        margin-top: .8rem;
+    }
+
+@media (min-width: 530px) {
+
+.feature-item__heading {
+            font-size: 1.875rem
+    }
+    }
+
+.feature-item p {
+        text-align: center;
+    }
+
+@media (min-width: 530px) {
+
+.feature-item p {
+            text-align: left
+    }
     }
 
 

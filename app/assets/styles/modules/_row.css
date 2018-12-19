@@ -4,13 +4,30 @@
     grid-gap: 1.5rem;
     align-items: start;
 
-    @mixin atMedium {
-        {
-            grid-template-columns: 1.25fr 2fr;
-        }
+    &__half {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 6.25rem;
+        align-items: start;
 
+        @mixin atMedium {
+            grid-row-gap: 6.25rem;
+        }
+    }
+
+    @mixin atMedium {       
+        grid-template-columns: 1.25fr 2fr;
+        
         &__medium-4 {
             grid-column: 1 / 2;
+        }
+
+        &__half {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__medium-6 {
+            grid-template-columns: 50% 50%;
         }
     
         &__medium-8 {
