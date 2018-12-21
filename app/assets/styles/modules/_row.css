@@ -15,8 +15,13 @@
         }
     }
 
+
+    &--t-padding {
+        padding-top: 80px;
+    }
+
     @mixin atMedium {       
-        grid-template-columns: 1.25fr 2fr;
+        /* grid-template-columns: 1.25fr 2fr; */
         
         &__medium-4 {
             grid-column: 1 / 2;
@@ -33,5 +38,32 @@
         &__medium-8 {
             grid-column: 2 / -1;
         }
-    }   
+    }
+
+    /* Equal height rules */
+    &--equal-height-at-medium {
+        @mixin atMedium {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    
+        & > div {
+            display: flex;
+            flex: 0 0 31%;
+        }
+    }
+
+    &--equal-height-at-large {
+        @mixin atLarge {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    
+        & > div {
+            display: flex;
+            flex: 0 0 31%;
+        }
+    }
 }

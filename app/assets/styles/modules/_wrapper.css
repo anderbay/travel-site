@@ -7,17 +7,37 @@
         max-width: 976px;
     }
 
-    .wrapper {
-        padding: 0;
+    &--no-padding-until-medium {
+        padding-left: 0;
+        padding-right: 0;
+        
+        @mixin atMedium {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+    &--no-padding-until-large {
+        padding-left: 0;
+        padding-right: 0;
+        
+        @mixin atLarge {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
     }
 
-    &--b-margin {
+    /* .wrapper {
+        padding: 0;
+    } */
 
-        margin-bottom: 1rem;
+        &--b-margin {
 
-        @mixin atSmall {
-            margin-bottom: 3.875rem;
+            margin-bottom: 1rem;
+
+            @mixin atSmall {
+                margin-bottom: 3.875rem;
+            }
+            
         }
-        
     }
 }
