@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 10px solid $mainBlue;
+    z-index: -5;
 
     &__image {
         display: block;
@@ -12,6 +13,7 @@
     &__text-content {
         position: absolute;
         text-align: center;
+        padding-top: 110px;
     }
     
     &__title {
