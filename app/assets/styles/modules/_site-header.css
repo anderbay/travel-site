@@ -3,10 +3,16 @@
     position: absolute;
     width: 100%;
     transition: background-color .3s ease-out;
+    z-index: 50;
 
     @mixin atMedium {
+        position: fixed;
         height: 4.1rem;
         background-color: rgba(47, 85, 114, .3);
+
+        &--dark {
+            background-color: rgba(23, 51, 72, .95);
+        }
     }
 
     & > * {
@@ -34,10 +40,17 @@
         margin: 0 auto;
         background-color: $mainBlue;
         padding: 16px 26px;
+        transition: transform .3s ease-out;
+        
 
         @mixin atMedium {
             margin: 0;
             padding: 25px 36px;
+
+            .site-header--dark & {
+                transform: scale(.58);
+                transform-origin: top center;
+            }
         }   
     }
 
@@ -177,6 +190,10 @@
         @mixin atMedium {
             font-size: 1rem;
             background-color: transparent;
+
+            &.is-current-link {
+                color: #fabb69;
+            }
         }
     }
 }
